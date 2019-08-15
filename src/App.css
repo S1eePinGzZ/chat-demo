@@ -1,33 +1,164 @@
-.App {
-  text-align: center;
+@import '~antd/dist/antd.css';
+
+.header-user-img{
+  width: 50px;
+  border-radius: 50%;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.header-box{
+  position: absolute;
+  right: 60px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header-box span{
   color: white;
+  margin-left: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.chat-container{
+  padding: 5px 0 0 0;
+  height: 700px;
+  box-shadow: 3px 3px 5px #cfcfcf;
+}
+
+.chat-message{
+  height: 400px;
+  max-height: 540px;
+  overflow: auto;
+  padding: 0 5px;
+}
+.list-container{
+  width: 200px;
+}
+
+.outer-container{
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+.chat-title{
+  text-align: center;
+  border-radius: 0px 36px 0 0;
+  width: 200px;
+  box-shadow: 2px -2px 5px #cfcfcf;
+  background-color: #f0f0f0;
+  margin: 35px 0 0 0;
+  font-size: 1.5rem;
+}
+
+
+
+
+.user-img-left{
+  float: left;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.arrow-left {
+  float: left;
+  width:20px;
+  height:20px;
+  background-color: black;
+}
+.chat-left-dom{
+  position: relative;
+  top: 22px;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: #404040;
+  border-left-color: #404040;
+  -webkit-box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+  box-shadow: -3px 3px 7px rgba(0, 0, 0, 0.07);
+}
+.chat-po-left{
+  display: block;
+  padding-left: 8px;
+  float: left;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+}
+.chat-left-box{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-left: 25px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.chat-text-left{
+  top: -17px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5px 10px;
+  position: relative;
+  left: 3px;
+  border-radius:5px;
+  word-wrap: break-word;
+}
+
+.chat-text-left p {
+  margin: 0;
+}
+
+.chat-userid-other{
+  position: relative;
+  top: -17px;
+  left: 3px;
+}
+
+
+.input-text{
+  background-color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+
+
+
+.user-list{
+  padding: 10px 10px !important;
+}
+
+.user-list span{
+  margin-left: 10px;
+  font-size: 1.1rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+
+
+.register-box-outer{
+  padding:3px;
+  background-color: #dfdfdf;
+  margin-top: 200px;
+}
+
+.register-box{
+  padding:20px 40px;
+  background-color:#f1f1f1;
+}
+
+.register-title{
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 300px) and (max-width: 992px) {
+  .list-container{
+    width: 100%;
+    min-width: 300px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
 }

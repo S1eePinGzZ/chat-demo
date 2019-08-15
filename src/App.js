@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Index from './components/index'
+import Register from './components/login/register'
+import Login from './components/login/login'
 import './App.css';
+import { connect } from 'react-redux';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      islogin : false,
+      needregister: false
+    };
+  }
+
+  changeislogin = () =>{
+    this.setState({
+      islogin: true
+    })
+  }
+
+  changeneedregister = () =>{
+    this.setState({
+      needregister: true
+    })
+  }
+
+  closeneedregister = () =>{
+    this.setState({
+      needregister: false
+    })
+  }
+
+  render() {
+    const islogin = this.state.islogin;
+    const needregister = this.state.needregister;
+    return (
+      <div className="App">
+        {
+          islogin ?
+          <Index store={this.props.store}></Index>
+         :(
+          needregister ?
+          <Register closeneedregister={this.closeneedregister} changeislogin ={this.changeislogin}></Register>
+          :<Login changeneedregister={this.changeneedregister} changeislogin ={this.changeislogin} ></Login>
+        )
+        }
+
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect((state) => {
+    return {
+        data:state.userlogin
+    }
+})(App);

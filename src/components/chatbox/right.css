@@ -1,0 +1,64 @@
+
+
+.user-img-right{
+  float: right;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.arrow-right {
+  float: right;
+  width:20px;
+  height:20px;
+  background-color: black;
+}
+.chat-right-dom{
+  position: relative;
+  float: right;
+  top: 22px;
+  right: 5px;
+  border-top-color: #404040;
+  border-right-color: #404040;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  -webkit-box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.07);
+  box-shadow: 3px -3px 7px rgba(0, 0, 0, 0.07);
+}
+.chat-po-right{
+  display: block;
+  padding-left: 8px;
+  float: right;
+  width: auto;
+  max-width: 200px;
+  height: auto;
+}
+.chat-right-box{
+  margin-bottom: 50px;
+  overflow: hidden;
+  padding-top: 20px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+}
+.chat-text-right{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 5px 10px;
+  position: relative;
+  clear: both;
+  top: -12px;
+  right: 12px;
+  height: auto;
+  border-radius: 5px;
+  word-wrap: normal;
+}
+
+.chat-text-right p {
+  margin: 0;
+}
+
+.chat-userid-you{
+  position: relative;
+  top:-13px;
+  right: 10px;
+  float: right;
+}

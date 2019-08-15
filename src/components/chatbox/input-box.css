@@ -1,0 +1,28 @@
+@import '~antd/dist/antd.css';
+
+.emoji-icon {
+  font-size: 24px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.emoji-btn li{
+  text-align: center;
+  cursor: pointer;
+  float: left;
+  list-style: none;
+  margin: 3px;
+  padding-right:3px;
+  font-size: 18px;
+  width: 24px;
+}
+
+.emoji-btn li:hover{
+  background-color: #d2d2d2;
+}
+
+.send-btn{
+  float: right;
+  margin: 5px;
+  margin-top: 33.5px;
+}
