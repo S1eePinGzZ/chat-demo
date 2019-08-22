@@ -4,9 +4,9 @@ let MsgList = {
 
 export function chatlist (state=MsgList,action){
       switch (action.type) {
-				case 'ChangeChat':
+		  case 'ChangeChat':
 	          return Object.assign({}, state, {
-	                MsgList: action.data,			//登路reduer
+	                MsgList: action.data,			
 	            })
 
         default:
