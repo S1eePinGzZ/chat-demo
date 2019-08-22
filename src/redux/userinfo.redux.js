@@ -1,23 +1,23 @@
 let userinfo = {
 	   id:'unknow',
-     pwd:'',
-		 islogin: false,
-		 nowsok: ''
+   	   pwd:'',
+	   islogin: false,
+	   nowsok: ''
 }
 
 export function userlogin (state=userinfo,action){
       switch (action.type) {
-				case 'login':
+		  case 'login':
 	          return Object.assign({}, state, {
 	                id: action.data.id,
-                  pwd: action.data.pwd,
-									islogin: action.data.islogin
+                 	pwd: action.data.pwd,
+			slogin: action.data.islogin
 	            })
-							case 'ChangeSocket':
-				          return Object.assign({}, state, {
-				                nowsok: action.data
-				            })
-        default:
-          return state;
+		  case 'ChangeSocket':
+	 	  return Object.assign({}, state, {
+			nowsok: action.data
+		    })
+     		  default:
+         	  return state;
       }
 }
