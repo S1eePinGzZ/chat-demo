@@ -1,5 +1,5 @@
 let sendMsg = {
-	   msg: "!?",
+	   msg: "",
 		 sendfrom:null,
 		 sendto:null
 }
