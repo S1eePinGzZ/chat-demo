@@ -4,11 +4,11 @@ let userList = {
 
 export function userlist (state=userList,action){
       switch (action.type) {
-				case 'getOnline':
+		case 'getOnline':
 	          return Object.assign({}, state, {
-	                online_user: action.data,			//登路reduer
+	                online_user: action.data,			
 	            })
-        default:
-          return state;
+       		default:
+          	return state;
       }
 }
