@@ -93,23 +93,6 @@ io.on('connection',function(socket){
 })
 
 
-
-
-app.post('/foo',function(req,res){
-		console.log(req.body);
-		res.cookie('userid',req.body.id)
-		console.log("here is" + inline);
-		return res.json({code:0})
-	})
-
-app.post('/test',function(req,res){
-		console.log(req.body);
-		const userid= req.cookies.userid;
-		console.log(userid);
-		return res.json({code:0})
-	})
-
-
 server.listen(8080,function(){
 	console.log("port 8080");
 })
