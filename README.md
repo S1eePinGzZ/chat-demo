@@ -1,68 +1,45 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 简介
 
-## Available Scripts
+使用React + mongoDB + react-redux + express + websecket 搭建的小型聊天室
 
-In the project directory, you can run:
+实现登录，注册，显示在线用户，1v1聊天，以及不同终端的适配
 
-### `npm start`
+## 运行
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+在根目录运行 npm isntall 安装依赖环境
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+npm start 运行项目
 
-### `npm test`
+在http://localhost:3000/查看效果
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+后台运行端口为8080，如果端口占用在server/app.js中更改端口，并在package.json，中更改proxy代理
 
-### `npm run build`
+```
+  "proxy": "http://localhost:8080"
+```
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 目录
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+```
+    public/
+    server/    //后端文件
+          app.js    //后端主文件
+          model.js  //链接、创建mongodb
+          user.js   //用户登录、注册API   
+    src/
+          components/    //组件
+                    chatbox/   //聊天框组件
+                    global/    //全局组件
+                    header/    //header组件
+                    login/     //登录和注册组件
+                    userlist/  //用户栏组件              
+          img/   //图片      
+          redux/   //redux文件
+                chatlist.redux.js   //保存从websocket接收到的消息列表
+                sendmsg.redux.js    //保存用户发送框的信息
+                userinfo.redux.js   //保存用户登录状态和信息
+                userlist.redux.js   //保存从后端获取的在线用户列表
+          reducer.js   //合并所有的reducer
+          
+    package.json
+```
