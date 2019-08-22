@@ -6,15 +6,15 @@ let sendMsg = {
 
 export function sendmsg (state=sendMsg,action){
       switch (action.type) {
-				case 'sendMsg':
+		  case 'sendMsg':
 	          return Object.assign({}, state, {
-	                msg: action.data,			//登路reduer
+	                msg: action.data,			
 	            })
-				case 'sendTo':
-					return Object.assign({}, state, {
-							sendto: action.data,			//登路reduer
-					})
-        default:
-          return state;
+		  case 'sendTo':
+		  return Object.assign({}, state, {
+			sendto: action.data,			
+		  })
+     		  default:
+        	  return state;
       }
 }
