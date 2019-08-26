@@ -10,7 +10,7 @@
 
 npm start 运行项目
 
-在http://localhost:3000/查看效果
+在http://localhost:3000   查看效果
 
 后台运行端口为8080，如果端口占用在server/app.js中更改端口，并在package.json，中更改proxy代理
 
